@@ -1,0 +1,247 @@
+<html>
+<head>
+    <title>寶可夢介紹</title>
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <script>
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0px;
+            font-family: Arial, sans-serif;
+        }
+
+        #b1 {
+            background-color: lightgray;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        #b1 h1 {
+            width: 400px;
+            margin: auto;
+            color: blue;
+            text-align: center;
+        }
+
+        #b2 {
+    height: 50px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 100px;  /* 調整padding */
+    position: relative;  /* 使下拉選單能根據父元素定位 */
+}
+
+.b2-1 {
+    line-height: 50px;
+    position: relative;  /* 使下拉選單的ul相對於這裡定位 */
+}
+
+.b2-1:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.b2-1 ul {
+    display: none;
+    position: absolute;  /* 絕對定位 */
+    top: 50px;  /* 避免選單與其他內容重疊 */
+    background-color: rgb(106, 106, 106);
+    min-width: 100px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    z-index: 999;  /* 保證選單顯示在最上層 */
+}
+
+.b2-1:hover ul {
+    display: block;  /* 顯示下拉選單 */
+}
+
+.b2-1 li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 16px;
+    display: block;
+}
+
+.b2-1:hover ul li:hover {
+    background-color: white;
+}
+
+.b2-1:hover ul li:hover a {
+    color: black;
+}
+
+
+        .slider {
+            background-color: black;
+        }
+
+        #b4 {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0px 300px;
+        }
+
+        img {
+            width: 200px;
+            height: 300px;
+        }
+
+        #b5 {
+            height: 70px;
+            line-height: 70px;
+            background-color: gray;
+        }
+
+        #b5 h4 {
+            color: white;
+            text-align: center;
+            margin: 0px;
+        }
+
+        /* 新增的區域樣式 */
+        #pokemon-info {
+            padding: 50px 100px;
+            background-color: #f9f9f9;
+        }
+
+        #pokemon-info h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .category ul li {
+            background-color: #e0e0e0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='b1'>
+        <h1>寶可夢世界</h1>
+    </div>
+    <div id="b2">
+        <div class="b2-1">首頁
+            <ul>
+                <li><a href="#">主角</a></li>
+                <li><a href="#">寶可夢</a></li>
+                <li><a href="#">道具</a></li>
+            </ul>
+        </div>
+        <div class="b2-1">屬性介紹
+            <ul>
+                <li><a href="#">火</a></li>
+                <li><a href="#">水</a></li>
+                <li><a href="#">地面</a></li>
+            </ul>
+        </div>
+        <div class="b2-1">地區介紹
+            <ul>
+                <li><a href="#">關都</a></li>
+                <li><a href="#">成都</a></li>
+                <li><a href="#">豐緣</a></li>
+            </ul>
+        </div>
+        <div class="b2-1">特殊招式
+            <ul>
+                <li><a href="#">超進化</a></li>
+                <li><a href="#">z招式</a></li>
+                <li><a href="#">極巨化</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><img src="0c1af808117e6f022ebcd1441bc115e0e93e2ed9.jpg" /></li>
+                <li><img src="622e388d-c4ec-4646-8114-b34c36f03ccb.jpg" /></li>
+                <li><img src="be2dfedf-4f8a-43f1-b99a-7c026d8db2a4.jpg"/></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 寶可夢屬性介紹 -->
+    <div id="pokemon-info">
+        <div class="category">
+            <h2>1. 關於寶可夢屬性</h2>
+            <h3>基本屬性</h3>
+            <ul>
+                <li>火屬性：強於草，弱於水。</li>
+                <li>水屬性：強於火，弱於電。</li>
+                <li>草屬性：強於水，弱於火。</li>
+                <li>電屬性：強於水，弱於地面。</li>
+                <!-- 可以根據需求添加更多屬性 -->
+            </ul>
+        </div>
+
+        <!-- 寶可夢地區介紹 -->
+        <div class="category">
+            <h2>2. 關於寶可夢地區</h2>
+            <h3>主要地區</h3>
+            <ul>
+                <li>關都地區：最初的寶可夢遊戲地區。</li>
+                <li>城都地區：第二代的舞台，擁有新生的寶可夢。</li>
+                <li>豐緣地區：第三代的舞台，以水域和多樣化的地形為特色。</li>
+                <li>合眾地區：第四代的舞台，都市化與自然景觀交織。</li>
+                <!-- 可以根據需求添加更多地區 -->
+            </ul>
+        </div>
+
+        <!-- 寶可夢特殊招式介紹 -->
+        <div class="category">
+            <h2>3. 關於寶可夢特殊招式</h2>
+            <h3>代表性招式</h3>
+            <ul>
+                <li>雷電拳：強大的電屬性物理攻擊。</li>
+                <li>火焰放射：範圍攻擊，對草屬性寶可夢特別有效。</li>
+                <li>冰凍光線：強力的冰屬性招式，能凍結對手。</li>
+                <li>精神強念：超能力系的特殊攻擊，對格鬥系寶可夢特別有效。</li>
+                <!-- 可以根據需求添加更多招式 -->
+            </ul>
+        </div>
+    </div>
+
+    <div id="b3">
+        <h2>加入寶可夢世界，開始你的冒險吧！</h2>
+    </div>
+    <div id="b4">
+        <img src="c95f08ee54a6d137323467bef5891d216e692e66.png">
+        <img src="images.jpg">
+        <img src="7ec8bac5e4b4c903ae179e3fc4217e19f617edfe.png">
+    </div>
+
+    <div id="b5">
+        <h4>寶可夢世界 版權所有© All Rights Reserved.</h4>
+    </div>
+</body>
+</html>
